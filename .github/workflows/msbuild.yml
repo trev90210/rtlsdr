@@ -172,7 +172,7 @@ jobs:
     - name: package and upload
       uses: actions/upload-artifact@v6
       with:
-        name: rtl-sdr-blog_dist
+        name: rtlsdr_old-dab_dist
         path: |
             dist/lib/rtlsdr.lib
             dist/bin
