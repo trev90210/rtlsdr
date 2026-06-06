@@ -875,7 +875,7 @@ int rtlsdr_demod_write_reg(rtlsdr_dev_t *dev, uint8_t page, uint16_t addr, uint1
 		data[1] = val & 0xff;
 	}
 
-	rtlsdr_demod_read_reg(dev, DUMMY_PAGE, DUMMY_ADDR, 1);
+//	rtlsdr_demod_read_reg(dev, DUMMY_PAGE, DUMMY_ADDR, 1);
 
 	r = rtlsdr_write_array(dev, page, addr, data, len);
 	if (r != len)
