@@ -96,6 +96,7 @@ jobs:
           cd ..
 
     - name: RTL-SDR configure build
+      uses: ilammy/msvc-dev-cmd@v1
       working-directory: ${{github.workspace}}
       run: |
         mkdir ${{github.workspace}}/build
@@ -152,7 +153,7 @@ jobs:
           echo "*********************************************"
           cat "${{ github.workspace }}/build\src\rtlsdr.vcxproj"
           echo "*********************************************"
-          ls -Recurse "C:\"
+          ls -Recurse "C:\" -include WINUsb.h
     
 
     #- name: Dir Listing
