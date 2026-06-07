@@ -152,7 +152,7 @@ jobs:
           echo "*********************************************"
           cat "${{ github.workspace }}/build\src\rtlsdr.vcxproj"
           echo "*********************************************"
-          ls -Recurse -File "/" -include WINUsb.h
+          ls -Recurse -File "C:\" -include WINUsb.h
     
 
     #- name: Dir Listing
