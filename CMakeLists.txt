@@ -149,6 +149,23 @@ install(FILES
 ########################################################################
 add_subdirectory(src)
 
+if(WIN32)
+#
+# Link Windows libraries
+#
+target_link_libraries(librtlsdr PRIVATE
+    advapi32
+    dnsapi
+    iphlpapi
+    ole32
+    user32
+    setupapi
+    shlwapi
+    winmm
+    winusb
+    ws2_32
+)
+else(WIN32)
 ########################################################################
 # Create Pkg Config File
 ########################################################################
@@ -159,6 +176,7 @@ ENDFOREACH(inc)
 FOREACH(lib ${LIBUSB_LIBRARY_DIRS})
     LIST(APPEND RTLSDR_PC_LIBS "-L${lib}")
 ENDFOREACH(lib)
+endif(WIN32)
 
 # use space-separation format for the pc file
 STRING(REPLACE ";" " " RTLSDR_PC_CFLAGS "${RTLSDR_PC_CFLAGS}")
