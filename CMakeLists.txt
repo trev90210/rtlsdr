@@ -184,7 +184,7 @@ INSTALL(
     FILES ${CMAKE_CURRENT_BINARY_DIR}/librtlsdr.pc
     DESTINATION ${LIB_INSTALL_DIR}/pkgconfig
 )
-install(TARGETS rtl_sdr rtl_tcp rtl_test rtl_fm rtl_eeprom rtl_power // rtl_biast rtl_adsb
+install(TARGETS rtl_sdr rtl_tcp rtl_test rtl_fm rtl_eeprom rtl_power ## rtl_biast rtl_adsb
   DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 
