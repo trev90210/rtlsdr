@@ -153,7 +153,7 @@ if(WIN32)
 #
 # Link Windows libraries
 #
-target_link_libraries(librtlsdr PRIVATE
+target_link_libraries(rtlsdr PRIVATE
     advapi32
     dnsapi
     iphlpapi
