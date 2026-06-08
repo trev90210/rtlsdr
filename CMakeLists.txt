@@ -153,7 +153,7 @@ if(WIN32)
 #
 # Link Windows libraries
 #
-link_libraries(PRIVATE
+link_libraries(
     advapi32
     dnsapi
     iphlpapi
