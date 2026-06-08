@@ -150,21 +150,7 @@ install(FILES
 add_subdirectory(src)
 
 if(WIN32)
-#
-# Link Windows libraries
-#
-link_libraries(
-    advapi32
-    dnsapi
-    iphlpapi
-    ole32
-    user32
-    setupapi
-    shlwapi
-    winmm
-    winusb
-    ws2_32
-)
+
 else(WIN32)
 ########################################################################
 # Create Pkg Config File
