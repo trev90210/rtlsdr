@@ -156,7 +156,7 @@ if(EXTERNAL_INCLUDE)
 endif()
 
 if(WIN32)
-    MESSAGE(STATUS "windows build)
+    MESSAGE(STATUS "windows build")
 else(WIN32)
 ########################################################################
 # Create Pkg Config File
