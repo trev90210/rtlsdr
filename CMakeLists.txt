@@ -149,6 +149,12 @@ install(FILES
 ########################################################################
 add_subdirectory(src)
 
+if(EXTERNAL_INCLUDE)
+    target_include_directories(rtlsdrlib 
+    PUBLIC ${EXTERNAL_INCLUDE}
+    )
+endif()
+
 if(WIN32)
     MESSAGE(STATUS "windows build)
 else(WIN32)
