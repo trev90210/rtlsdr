@@ -150,7 +150,7 @@ install(FILES
 add_subdirectory(src)
 
 if(WIN32)
-
+    MESSAGE(STATUS "windows build)
 else(WIN32)
 ########################################################################
 # Create Pkg Config File
